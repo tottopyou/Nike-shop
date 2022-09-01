@@ -14,7 +14,6 @@
   justify-content: center;
   width: 1200px;
   height: 100%;
-  background: #000;
 }
 @media (max-width: 1200px) {
   .main {
@@ -26,7 +25,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: aqua;
 }
 .header-img {
   background: url(header-img.jpg) no-repeat;
@@ -65,18 +63,88 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.header-info .info-text .peregorodka {
-  width: 4px;
-  min-height: 200px;
-  border-radius: 10px;
-  background-color: black;
-}
-.header-info .info-text .text1, .header-info .info-text .text2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
   width: 100%;
+}
+.header-info .info-text .text {
+  width: 100%;
   height: 100%;
+  display: flex;
+  font-size: large;
+}
+.header-info .info-text .text p {
+  margin: 5px;
+}
+.header-info .info-text .text .left {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-right: 10px;
+}
+@media (max-width: 480px) {
+  .header-info .info-text .text .left {
+    justify-content: start;
+  }
+}
+.header-info .info-text .text .right {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  margin-left: 10px;
+}
+.header .image {
+  background: url(krosu.jpg) no-repeat;
+  background-size: contain;
+  max-width: 1200px;
+  height: 668.085106383px;
+  margin-top: 25px;
+}
+@media (max-width: 1200px) {
+  .header .image {
+    height: 55.6737588652vw;
+    width: 100%;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .proposition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.content .proposition .foto {
+  width: 600px;
+  height: 100%;
+}
+
+.feadbacks {
+  background-color: white;
+  color: black;
+}
+.feadbacks #feadback-field {
+  margin: 15px;
+  background-color: white;
+  margin: 16px 0px 16px 0px;
+}
+.feadbacks #feadback-field .primary {
+  font-weight: bold;
+  margin: 0px;
+  padding-bottom: 0px;
+}
+.feadbacks #feadback-field .small {
+  color: black;
+  font-weight: 400;
+}
+.feadbacks #feadback-field .coment {
+  background-color: lightgray;
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */

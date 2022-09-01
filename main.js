@@ -1,6 +1,32 @@
 let comments = [];
 
+
 loadComments();
+const button = document.querySelector('#submit');
+const newTask = document.querySelector('#exampleInputName1');
+const newTask2 = document.querySelector('#exampleInputFeadback1')
+
+button.disabled = true;
+
+newTask.onkeyup  = () => {
+    if ((newTask.value.length > 0) && (newTask2.value.length > 0 )) {
+        button.disabled = false;
+    }
+    else {
+        button.disabled = true;
+    }
+}
+
+newTask2.onkeyup  = () => {
+    if ((newTask.value.length > 0) && (newTask2.value.length > 0 )) {
+        button.disabled = false;
+    }
+    else {
+        button.disabled = true;
+    }
+}
+
+
 
 document.getElementById('submit').onclick= function()
 {
@@ -16,7 +42,9 @@ document.getElementById('submit').onclick= function()
     }
 
     exampleInputName.value='';
-    exampleInputFeadback='';
+    exampleInputFeadback.value='';
+    
+    button.disabled = true;
 
     comments.push(comment);
 
@@ -44,9 +72,7 @@ function showComments()
     let out= '';
     comments.forEach(function(item)
     {
-        out+=`<p class="text-right small">${timeConverter(item.time)}</p>`;
-        out+=`<p class="alert alert primary">${item.name}</p>`;
-        out+=`<p class="alert alert success">${item.feadback}</p>`;
+        out+=`<div class="coment"><p class="alert alert primary">${item.name} <a class="text-right small">${timeConverter(item.time)}</a></p><p class="alert alert success">${item.feadback}</p></div>`;
 
     });
 
