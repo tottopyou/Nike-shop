@@ -1,0 +1,82 @@
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 250, 245);
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1200px;
+  height: 100%;
+  background: #000;
+}
+@media (max-width: 1200px) {
+  .main {
+    width: 100vw;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: aqua;
+}
+.header-img {
+  background: url(header-img.jpg) no-repeat;
+  background-size: contain;
+  height: 453.3333333333px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .header-img {
+    height: 37.7777777778vw;
+  }
+}
+.header-img p {
+  color: white;
+  font-size: 220px;
+  margin: 0px;
+}
+@media (max-width: 1200px) {
+  .header-img p {
+    font-size: 18.3333333333vw;
+  }
+}
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header-info .head {
+  font-size: xx-large;
+}
+.header-info .info-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-info .info-text .peregorodka {
+  width: 4px;
+  min-height: 200px;
+  border-radius: 10px;
+  background-color: black;
+}
+.header-info .info-text .text1, .header-info .info-text .text2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
