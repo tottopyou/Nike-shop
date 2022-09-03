@@ -1,5 +1,6 @@
 let comments = [];
 
+
 loadComments();
 const button = document.querySelector('#submit');
 const newTask = document.querySelector('#exampleInputName1');
@@ -41,7 +42,9 @@ document.getElementById('submit').onclick= function()
     }
 
     exampleInputName.value='';
-    exampleInputFeadback='';
+    exampleInputFeadback.value='';
+    
+    button.disabled = true;
 
     comments.push(comment);
 
