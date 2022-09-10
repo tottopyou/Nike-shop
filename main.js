@@ -1,7 +1,7 @@
 let comments = [];
 
-
 loadComments();
+
 const button = document.querySelector('#submit');
 const newTask = document.querySelector('#exampleInputName1');
 const newTask2 = document.querySelector('#exampleInputFeadback1')
@@ -26,8 +26,6 @@ newTask2.onkeyup  = () => {
     }
 }
 
-
-
 document.getElementById('submit').onclick= function()
 {
     event.preventDefault();
@@ -49,7 +47,6 @@ document.getElementById('submit').onclick= function()
     comments.push(comment);
 
     saveComments();
-
     showComments();
 
 }
@@ -90,5 +87,48 @@ function timeConverter(UNIX_timestamp){
     var sec = a.getSeconds();
     var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     return time;
+} 
 
+const menuLinks=document.querySelectorAll('.menu__link[data-goto]');
+const menuBody=document.querySelector('.menu__body');
+const iconMenu=document.querySelector('.menu__icon');
+
+if(menuLinks.length>0)
+{
+    menuLinks.forEach(menuLink=>
+        {
+            menuLink.addEventListener('click',onMenuLinkClick)
+        });
+        function onMenuLinkClick(e)
+        {
+            const menuLink=e.target;
+            if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto))
+            {
+                const gotoBlock=document.querySelector(menuLink.dataset.goto);
+                const gotoBlockValue=gotoBlock.getBoundingClientRect().top+pageYOffset-document.querySelector('header').offsetHeight;
+                
+                if (iconMenu.classList.contains('_active'))
+                {
+                    iconMenu.classList.remove('_active');
+                    menuBody.classList.remove('_active');
+                }
+
+                window.scrollTo(
+                    {
+                        top:gotoBlockValue,
+                        behavior:"smooth"
+                    });
+                    e.preventDefault();
+            }
+        }
+}
+
+
+if(iconMenu)
+{
+    iconMenu.addEventListener("click",function(e)
+    {
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+    });
 }
