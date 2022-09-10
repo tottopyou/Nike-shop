@@ -313,23 +313,39 @@ $col-3:#9c051e;
 
         0%{
         }
+        50%{
+            @keyframes num{
 
+                0%{
+                }
+                50%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
         100%{
             width: 75px;
+            
         }
     }    
     .number{
 
         border-radius: 15px;
-        display: flex ;
+        display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
+        opacity:0; 
+        animation: num 2s linear alternate 1s  forwards;
+        
+        }
         .num-st{
             font-size: 29px;
             color: $col-2;
             font-size: 22px;
             margin: 0px;
-            opacity:1;
         }
     }
     .icon{
@@ -343,5 +359,4 @@ $col-3:#9c051e;
             font-size: 29px;
             color: $col-2;
         }
-    }
 }

@@ -323,11 +323,39 @@
           animation: circle 1s linear alternate 0s forwards;
 }
 @-webkit-keyframes circle {
+  50% {
+    @keyframes num {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
   100% {
     width: 75px;
   }
 }
 @keyframes circle {
+  50% {
+    @-webkit-keyframes num {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes num {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
   100% {
     width: 75px;
   }
@@ -337,15 +365,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  -webkit-animation: num 2s linear alternate 1s forwards;
+          animation: num 2s linear alternate 1s forwards;
 }
-.basket .number .num-st {
+.basket .num-st {
   font-size: 29px;
   color: #141618;
   font-size: 22px;
   margin: 0px;
-  opacity: 1;
 }
-.basket .icon {
+
+.icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -353,7 +384,7 @@
   align-items: center;
   padding: 0px 0px 1px 5px;
 }
-.basket .icon .fa-shopping-cart {
+.icon .fa-shopping-cart {
   font-size: 29px;
   color: #141618;
 }/*# sourceMappingURL=style.css.map */
