@@ -1,0 +1,438 @@
+$col-1:#fcfefe;
+$col-2:#141618;
+$col-3:#9c051e;
+
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: $col-2;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .active{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }   
+    &-img{
+        
+        background: url(../foto/header-img.jpg) no-repeat;
+        background-size:contain;
+        height: (1200px*595)/1575;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width:1200px) {
+            height: (100vw*595)/1575;
+        }
+        transform: translate(-50%, 0%);
+        opacity: 0;
+        transition: all 1s ease 0s;
+        .nike-name{
+            color: $col-3;
+            font-size: 220px;
+            margin: 0px;
+            transition: all 1s;
+            -webkit-text-stroke: 4px;
+            font-variation-settings: "wght" 900; 
+            color: transparent;
+            font-family: "meta",sans-serif;
+            text-shadow: 5px 5px 0px $col-3,
+                        10px 10px 0px $col-2,
+                        15px 15px 0px $col-2 ;
+            font-style: italic;
+            cursor: pointer;
+            @media (max-width:1200px) {
+                font-size: (100vw*220)/1200;
+            }  
+        }
+
+    }
+    
+    &-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $col-1;
+        .head{
+            font-size: xx-large;
+            margin-top: 25px;
+            transform: translate(0, 100%);
+            opacity: 0;
+            transition: all 1.2s ease 0.2s;
+        }
+        .active{
+            transform: translate(0px,0px);
+            opacity: 1;
+        }
+        .info-text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            transform: translate(0, 100%);
+            opacity: 0;
+            transition: all 1.7s ease 0.4s;
+            
+            .text{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: large;
+                p{
+                    margin: 5px;
+                }
+                .left{
+                    display: flex;
+                    justify-content: end;
+                    width: 100%;
+                    margin-right: 10px;
+                    @media (max-width:480px) {
+                        justify-content: start;
+                    }
+                }
+                .right{
+                    display: flex;
+                    justify-content: start;
+                    width: 100%;
+                    margin-left: 10px;
+                    color: $col-3;
+                }
+            }
+        }
+        .active{
+            transform: translate(0px,0px);
+            opacity: 1;
+        }
+     }
+     .image{
+        background: url(../foto/krosu.jpg) no-repeat;
+        background-size:contain;
+        max-width: 1200px;
+        height: (1200px*314)/564;
+        margin-top: 25px;
+        z-index: 1;
+        @media (max-width:1200px) {
+            height: (100vw*314)/564;
+            width: 100%;
+        }
+     }
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .revers{
+        flex-direction: row-reverse;
+        transform: translate(-50%, 0%);
+        opacity: 0;
+        transition: all 1s ease 0.2s;
+    }
+    .active{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+    .proposition{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 20px;
+        transform: translate(-50%, 0%);
+        opacity: 0;
+        transition: all 1s ease 0.2s;
+        @media (max-width:640px) {
+            flex-direction: column;
+        }
+
+        .foto{
+            width: 600px;
+            height: 429px;
+            @media (max-width:1200px) {
+                height: ((100vw*429)/602)/2;
+                width: 100vw/2;
+            }
+            @media (max-width:640px) {
+                height: ((100vw*429)/602);
+                width: 100%;
+            }
+        }
+        .about-sneakers{
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $col-1;
+            @media (max-width:640px) {
+                padding-top: 35px;
+            }
+            .required{
+                font-size: 24px;
+                border-radius: 15px;
+                height: 60px;
+                width: 80px;
+                text-align: center;
+                border: 2px solid $col-3;
+                color: $col-3;
+                background-color: $col-2;
+            }
+            .button-buy{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .buy{
+                background-color: $col-3; 
+                color: $col-1; 
+                font-size: 36px;
+                border: 2px solid $col-3;
+                margin: 25px;
+                border-radius: 15px;
+                transition-duration: 0.5s;
+            }
+            .buy:hover {
+                background-color: $col-2; 
+                color: $col-3; 
+                border: 2px solid $col-3;
+
+            }
+            .cost{
+                width: 35%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                margin-top: 20px;
+                .cost-value{
+                    display: flex;
+                    align-items: end;
+                    flex-direction: column;
+                    letter-spacing: 1px;
+                    .discount{
+                        width: 50px;
+                        height: 20px;
+                        padding-left: 5px;
+                        background-color:$col-1 ;
+                        color: $col-2;
+                        border-radius: 15px;
+                        margin: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                    }
+                    .f_cost{
+                        color: $col-3;
+                        font-size: 26px;
+                        margin: 0px;
+                        text-decoration: line-through $col-1; 
+                    }
+                    .r_cost{
+                        color: $col-1;
+                        font-size: 35px;
+                        font-weight: 300;
+                    }
+                }
+                
+            }
+        }
+        .active{
+            transform: translate(0px,0px);
+            opacity: 1;
+        }  
+    }
+}
+.feadbacks{
+    color: $col-1;
+    #feadback-field{
+        margin: 15px;
+        background-color: $col-2; 
+        margin: 16px 0px 16px 0px;
+        .primary{
+            font-weight: bold;
+            margin: 0px;
+            padding-bottom: 0px;
+        }
+        .small{
+            color: $col-1;
+            font-weight: 400;
+        }
+        .coment{
+            background-color: $col-2;
+            border-radius: 15px;
+            border: 2px solid $col-3;
+            margin-bottom: 10px;
+        }
+    }
+}
+.container{
+    .comments{
+        color: $col-3;
+    }
+    .mb-3{
+        .form-control{
+            background-color: $col-2;
+            border: 2px solid $col-3;
+            color: $col-1;
+        }
+    }
+    #submit{
+        background-color: $col-3; 
+        color: $col-1; 
+        border: 2px solid $col-3;
+        transition-duration: 0.5s;
+    }
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
+    height: 100%;
+    margin-top: 70px;
+    @media (max-width:1200px) {
+        width: 100vw;
+    }
+    .name{
+    font-size:80px;
+    color: $col-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    
+    @media (max-width:1200px) {
+        font-size: (100vw*80)/1200;
+    }
+    }
+    .active{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
+.nike-name:hover{
+    -webkit-text-stroke: 3px $col-1;
+    font-variation-settings: "wght" 900;
+
+    text-shadow: none;
+}
+.basket{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: $col-1;
+    border-radius: 30px;
+    gap: 3px;
+    z-index: 15;
+    width: 43.5px;
+    height: 35px;
+   
+    .number{
+
+        border-radius: 15px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        opacity:0; 
+        animation: num 2s linear alternate 0s  forwards;
+        @keyframes num{
+
+            0%{
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .num-st{
+            font-size: 29px;
+            color: $col-2;
+            font-size: 22px;
+            margin: 0px;
+        }
+    }
+    .icon{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0px 0px 1px 5px;
+        .fa-shopping-cart{
+            font-size: 29px;
+            color: $col-2;
+        }
+    }
+}
+.links {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .social{
+        flex: 1 1 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        margin: 25px 0px 25px 0px;
+        .s-j{
+            display: flex;
+            justify-content: center;
+            
+            gap: 5px;
+        }
+        p{
+            margin: 0px;
+            color: $col-1;
+        }
+        i{
+            font-size: 24px;
+            opacity: .85;
+            color: $col-1;
+        }
+        a{
+            text-decoration: none;
+            color: $col-1;
+        }
+        a:hover{
+            color: $col-3;
+        }
+        h6{
+            color:$col-1;
+        }
+        
+    }
+    .s4{
+        p::selection{
+            background-color: $col-3;
+        }
+    }
+}
+.teleport{
+    text-decoration: none;
+    z-index: 15;
+}
