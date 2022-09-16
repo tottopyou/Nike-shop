@@ -1,39 +1,37 @@
-#fotoVapor
-{
-  background: url('../images/NIKE-AIR-VAPOR-MAX.jpg') no-repeat;
-  background-size: contain;
-}
-#fotoForce
-{
-  background: url('../images/NIKE-AIR-FORCE-1.jpg') no-repeat;
-  background-size: contain;
-}
-#foto90
-{
-  background: url('../images/Nike-90.jpg') no-repeat;
-  background-size: contain;
-}
-#fotoMax
-{
-  background: url('../images/Nike-Air-Max-270-React.jpg') no-repeat;
-  background-size: contain;
-}
-#fotoM2K
-{
-  background: url('../images/Nike-M2K-Tekno.jpg') no-repeat;
-  background-size: contain;
-}
-#fotoShox
-{
-  background: url('../images/Nike-Shox-TL.jpg') no-repeat;
-  background-size: contain;
-}
-#fotoZoom
-{
-  background: url('../images/Nike-Zoom-2K.jpg') no-repeat;
+#fotoVapor {
+  background: url("../images/NIKE-AIR-VAPOR-MAX.jpg") no-repeat;
   background-size: contain;
 }
 
+#fotoForce {
+  background: url("../images/NIKE-AIR-FORCE-1.jpg") no-repeat;
+  background-size: contain;
+}
+
+#foto90 {
+  background: url("../images/Nike-90.jpg") no-repeat;
+  background-size: contain;
+}
+
+#fotoMax {
+  background: url("../images/Nike-Air-Max-270-React.jpg") no-repeat;
+  background-size: contain;
+}
+
+#fotoM2K {
+  background: url("../images/Nike-M2K-Tekno.jpg") no-repeat;
+  background-size: contain;
+}
+
+#fotoShox {
+  background: url("../images/Nike-Shox-TL.jpg") no-repeat;
+  background-size: contain;
+}
+
+#fotoZoom {
+  background: url("../images/Nike-Zoom-2K.jpg") no-repeat;
+  background-size: contain;
+}
 
 .bg {
   display: flex;
@@ -55,7 +53,7 @@
   opacity: 1;
 }
 .header-img {
-  background: url('../images/header-img.jpg') no-repeat;
+  background: url("../images/header-img.jpg") no-repeat;
   background-size: contain;
   height: 453.3333333333px;
   width: 100%;
@@ -149,11 +147,12 @@
   opacity: 1;
 }
 .header .image {
-  background: url('../images/krosu.jpg') no-repeat;
+  background: url("../images/krosu.jpg") no-repeat;
   background-size: contain;
   max-width: 1200px;
   height: 668.085106383px;
   margin-top: 25px;
+  z-index: 1;
 }
 @media (max-width: 1200px) {
   .header .image {
@@ -191,7 +190,7 @@
   opacity: 0;
   transition: all 1s ease 0.2s;
 }
-@media (max-width: 620px) {
+@media (max-width: 640px) {
   .content .proposition {
     flex-direction: column;
   }
@@ -206,7 +205,7 @@
     width: 100vw/2;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 640px) {
   .content .proposition .foto {
     height: 71.2624584718vw;
     width: 100%;
@@ -222,7 +221,7 @@
   justify-content: center;
   color: #fcfefe;
 }
-@media (max-width: 620px) {
+@media (max-width: 640px) {
   .content .proposition .about-sneakers {
     padding-top: 35px;
   }
@@ -241,12 +240,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 75px;
-}
-@media (max-width: 620px) {
-  .content .proposition .about-sneakers .button-buy {
-    margin-top: 35px;
-  }
 }
 .content .proposition .about-sneakers .buy {
   background-color: #9c051e;
@@ -261,6 +254,45 @@
   background-color: #141618;
   color: #9c051e;
   border: 2px solid #9c051e;
+}
+.content .proposition .about-sneakers .cost {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 20px;
+}
+.content .proposition .about-sneakers .cost .cost-value {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+.content .proposition .about-sneakers .cost .cost-value .discount {
+  width: 50px;
+  height: 20px;
+  padding-left: 5px;
+  background-color: #fcfefe;
+  color: #141618;
+  border-radius: 15px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.content .proposition .about-sneakers .cost .cost-value .f_cost {
+  color: #9c051e;
+  font-size: 26px;
+  margin: 0px;
+  -webkit-text-decoration: line-through #fcfefe;
+          text-decoration: line-through #fcfefe;
+}
+.content .proposition .about-sneakers .cost .cost-value .r_cost {
+  color: #fcfefe;
+  font-size: 35px;
+  font-weight: 300;
 }
 .content .proposition .active {
   transform: translate(0px, 0px);
@@ -439,4 +471,15 @@
 }
 .links .social h6 {
   color: #fcfefe;
+}
+.links .s4 p::-moz-selection {
+  background-color: #9c051e;
+}
+.links .s4 p::selection {
+  background-color: #9c051e;
+}
+
+.teleport {
+  text-decoration: none;
+  z-index: 15;
 }/*# sourceMappingURL=style.css.map */

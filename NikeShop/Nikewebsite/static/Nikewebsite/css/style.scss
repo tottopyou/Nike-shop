@@ -2,6 +2,41 @@ $col-1:#fcfefe;
 $col-2:#141618;
 $col-3:#9c051e;
 
+#fotoVapor
+{
+  background: url('../images/NIKE-AIR-VAPOR-MAX.jpg') no-repeat;
+  background-size: contain;
+}
+#fotoForce
+{
+  background: url('../images/NIKE-AIR-FORCE-1.jpg') no-repeat;
+  background-size: contain;
+}
+#foto90
+{
+  background: url('../images/Nike-90.jpg') no-repeat;
+  background-size: contain;
+}
+#fotoMax
+{
+  background: url('../images/Nike-Air-Max-270-React.jpg') no-repeat;
+  background-size: contain;
+}
+#fotoM2K
+{
+  background: url('../images/Nike-M2K-Tekno.jpg') no-repeat;
+  background-size: contain;
+}
+#fotoShox
+{
+  background: url('../images/Nike-Shox-TL.jpg') no-repeat;
+  background-size: contain;
+}
+#fotoZoom
+{
+  background: url('../images/Nike-Zoom-2K.jpg') no-repeat;
+  background-size: contain;
+}
 
 .bg {
     display: flex;
@@ -22,7 +57,7 @@ $col-3:#9c051e;
     }   
     &-img{
         
-        background: url(header-img.jpg) no-repeat;
+        background: url('../images/header-img.jpg') no-repeat;
         background-size:contain;
         height: (1200px*595)/1575;
         width: 100%;
@@ -82,6 +117,7 @@ $col-3:#9c051e;
             transform: translate(0, 100%);
             opacity: 0;
             transition: all 1.7s ease 0.4s;
+            
             .text{
                 width: 100%;
                 height: 100%;
@@ -114,11 +150,12 @@ $col-3:#9c051e;
         }
      }
      .image{
-        background: url(krosu.jpg) no-repeat;
+        background: url('../images/krosu.jpg') no-repeat;
         background-size:contain;
         max-width: 1200px;
         height: (1200px*314)/564;
         margin-top: 25px;
+        z-index: 1;
         @media (max-width:1200px) {
             height: (100vw*314)/564;
             width: 100%;
@@ -152,7 +189,7 @@ $col-3:#9c051e;
         transform: translate(-50%, 0%);
         opacity: 0;
         transition: all 1s ease 0.2s;
-        @media (max-width:620px) {
+        @media (max-width:640px) {
             flex-direction: column;
         }
 
@@ -163,7 +200,7 @@ $col-3:#9c051e;
                 height: ((100vw*429)/602)/2;
                 width: 100vw/2;
             }
-            @media (max-width:620px) {
+            @media (max-width:640px) {
                 height: ((100vw*429)/602);
                 width: 100%;
             }
@@ -177,7 +214,7 @@ $col-3:#9c051e;
             align-items: center;
             justify-content: center;
             color: $col-1;
-            @media (max-width:620px) {
+            @media (max-width:640px) {
                 padding-top: 35px;
             }
             .required{
@@ -194,10 +231,7 @@ $col-3:#9c051e;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: 75px;
-                @media (max-width:620px) {
-                    margin-top: 35px;
-                }
+                
             }
             .buy{
                 background-color: $col-3; 
@@ -213,6 +247,45 @@ $col-3:#9c051e;
                 color: $col-3; 
                 border: 2px solid $col-3;
 
+            }
+            .cost{
+                width: 35%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                margin-top: 20px;
+                .cost-value{
+                    display: flex;
+                    align-items: end;
+                    flex-direction: column;
+                    letter-spacing: 1px;
+                    .discount{
+                        width: 50px;
+                        height: 20px;
+                        padding-left: 5px;
+                        background-color:$col-1 ;
+                        color: $col-2;
+                        border-radius: 15px;
+                        margin: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                    }
+                    .f_cost{
+                        color: $col-3;
+                        font-size: 26px;
+                        margin: 0px;
+                        text-decoration: line-through $col-1; 
+                    }
+                    .r_cost{
+                        color: $col-1;
+                        font-size: 35px;
+                        font-weight: 300;
+                    }
+                }
+                
             }
         }
         .active{
@@ -386,5 +459,15 @@ $col-3:#9c051e;
         h6{
             color:$col-1;
         }
+        
     }
+    .s4{
+        p::selection{
+            background-color: $col-3;
+        }
+    }
+}
+.teleport{
+    text-decoration: none;
+    z-index: 15;
 }
