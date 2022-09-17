@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'Nikewebsite/Bcss/BStyle.css' %}?{% now 'U' %}">
+</head>
+<body> 
+    <div class="video">
+    <video autoplay muted id="myVideo">
+        <source src="{% static 'Nikewebsite/Video/video.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+    <div class="bg">
+        <header class="header">
+            <div class="header__container">
+                <a href="{% url 'index' %}"><i class="fa fa-home"></i></a>
+                <button class="buy">Оформити замовлення</button>
+            </div>
+        </header>
+        <div class="main">
+            <div class="delete">
+                <div class="button">
+                    <button class="del"><i class="fa fa-trash"></i></button>
+                    <p>Видалити все</p>
+                </div>
+            </div>
+            <div class="content section_1">
+                <div class="proposition anim-items no-hide-anim">
+                    <div id="fotoChoose" class="foto">
+                    </div>
+                    <div class="about-sneakers">
+                        <h1>NIKE AIR VAPORMAX</h1>
+                        <div class="size">
+                            <h3>Розмір : 38</h3>
+                        </div>
+                        <div class="cost">
+                            <div class="count-buy">
+                                <button class="count " id="minus"><i class="fa fa-minus"></i></button>
+                                <span class="plus-minus">1</span>
+                                <button class="count" id="plus"><i class="fa fa-plus"></i></button>
+                            </div>
+                            <div class="cost-value">
+                                <div class="discount">-23%</div>
+                                <p class="f_cost">3500 ₴</p>
+                                <p class="r_cost">2699 ₴</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'Nikewebsite/js/loading.js' %}"></script>
+    <script src="{% static 'Nikewebsite/js/plus-minus.js' %}"></script>
+</body>
+</html>

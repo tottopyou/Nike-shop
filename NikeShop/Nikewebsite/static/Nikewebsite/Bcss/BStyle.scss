@@ -1,0 +1,283 @@
+
+$col-1:#fcfefe;
+$col-2:#141618;
+$col-3:#9c051e;
+
+#fotoChoose
+{
+    background: url('../images/NIKE-AIR-VAPOR-MAX.jpg') no-repeat;
+    background-size: contain;
+}
+
+body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+
+    background-color: $col-2;
+}
+.bg{
+    background-color: #141618;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity:0; 
+        animation: flash 1s linear alternate 3.5s  forwards;
+        @keyframes flash {
+
+            0%{
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #141618;
+        .header__container
+            {
+            max-width: 1200px;
+            margin: 0px auto ;
+            display: flex;
+            padding: 0px 30px;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70px;
+            color: black;
+            .fa-home{
+                color: #fcfefe;
+                font-size: 36px;
+                margin-left: 15px;
+                 transition-duration: 0.5s;
+                @media (max-width:1200px) {
+                    margin-left: 0px;
+                }
+            }
+            .fa-home:hover{
+                color: $col-3;
+            }
+            .buy{
+                background-color: $col-3; 
+                color: $col-1; 
+                font-size: 24px;
+                border: 2px solid $col-3;
+                margin: 25px;
+                border-radius: 15px;
+                transition-duration: 0.5s;
+                margin: 0px;
+                @media (max-width:400px) {
+                    max-width: 190px;
+                }
+            }
+            .buy:hover {
+                background-color: $col-2; 
+                color: $col-3; 
+                border: 2px solid $col-3;
+
+            }
+        }
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 1200px;
+        height: 100%;
+        margin-top: 70px;
+        @media (max-width:1200px) {
+            width: 100vw;
+        }  
+        .delete{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            .button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                margin-right: 30px;
+                color: $col-1;
+                margin-top: 20px;
+                p{
+                    font-size: 24px;
+                    margin: 0px;
+                }
+                .del{
+                    border: none;
+                    background-color: $col-2;
+                    i{
+                        transition-duration: 0.5s;
+                        font-size: 36px;
+                        color: $col-1;
+                        margin: 10px 0px 10px 0px;
+                    }
+                }
+                .del:hover {
+                    i{
+                        color: $col-3;
+                    } 
+                }
+            }
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .proposition{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                margin: 20px;             
+                @media (max-width:740px) {
+                    flex-direction: column;
+                }
+        
+                .foto{
+                    width: 600px;
+                    height: 429px;
+                    @media (max-width:1200px) {
+                        height: ((100vw*429)/602)/2;
+                        width: 100vw/2;
+                    }
+                    @media (max-width:740px) {
+                        height: ((100vw*429)/602);
+                        width: 100%;
+                    }
+                }
+                .about-sneakers{
+                    width: 100%;
+                    max-width: 600px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: $col-1;
+                    @media (max-width:740px) {
+                        padding-top: 35px;
+                    }
+                    .size{
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: start;
+                    }                                    
+                }
+            }
+            .active{
+                transform: translate(0px,0px);
+                opacity: 1;
+            }  
+            .cost{
+                width: 80%;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin-top: 20px;
+                @media (max-width:1110px) {
+                    margin-top: 0px;
+                    align-items: center;
+                }
+                .count-buy{
+                    display: flex;
+                    align-items: center;
+
+                    span{
+                        font-size: 64px;
+                        color: $col-1;
+                        margin: 0px 15px;
+                        @media (max-width:1100px) {
+                            font-size: 40px;
+                        }
+                   
+
+                    }
+                    .count{
+                        color: $col-1;
+                        border: none;
+                        background-color: $col-2;
+                        font-size: 72px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .fa{
+                            font-size: 34px;
+                            @media (max-width:1100px) {
+                                font-size: 26px;
+                            }
+                           
+                        }
+                    }
+                }
+                .cost-value{
+                    display: flex;
+                    align-items: end;
+                    flex-direction: column;
+                    letter-spacing: 1px;
+                    .discount{
+                        width: 50px;
+                        height: 20px;
+                        padding-left: 5px;
+                        background-color:$col-1 ;
+                        color: $col-2;
+                        border-radius: 15px;
+                        margin: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                    }
+                    .f_cost{
+                        color: $col-3;
+                        font-size: 26px;
+                        margin: 0px;
+                        text-decoration: line-through $col-1; 
+                    }
+                    .r_cost{
+                        color: $col-1;
+                        font-size: 35px;
+                        font-weight: 300;
+                    }
+                }
+                
+            }
+        }                                                                        
+    }
+}            
+.video {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background-color: $col-2;
+   opacity:1; 
+   animation: num .3s linear alternate 3.2s  forwards;
+   @keyframes num{
+
+       0%{
+       }
+       100%{
+           opacity: 0;
+           display: none;
+       }
+   }
+   #myVideo{
+    height:(1080/1920)*100vw ;
+   width: 100%;
+   background-size:contain;
+   }
+
+  }
+  
