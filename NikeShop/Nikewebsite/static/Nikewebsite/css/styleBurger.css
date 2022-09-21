@@ -36,7 +36,7 @@
   justify-content: space-between;
 }
 
-@media(min-width:767px)
+@media(min-width:760px)
 {
   .menu__list
   {
@@ -50,7 +50,7 @@
   }
 }
 
-@media(max-width:767px)
+@media(max-width:760px)
 {
   .menu__icon
   {

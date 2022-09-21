@@ -167,6 +167,24 @@ body{
                     @media (max-width:740px) {
                         padding-top: 35px;
                     }
+                    .close{
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        width: 100%;
+                        transition-duration: 0.5s;
+                        .close-button{
+                            border: none;
+                            background-color: $col-2;
+                            color: $col-1;
+                            .material-icons{
+                                font-size: 36px;
+                            }
+                        }
+                        .close-button:hover{
+                            color: $col-3;
+                        }   
+                    }
                     .size{
                         width: 80%;
                         height: 100%;
