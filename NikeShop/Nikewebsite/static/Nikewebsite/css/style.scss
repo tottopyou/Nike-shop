@@ -495,7 +495,7 @@ $col-3:#9c051e;
     border-radius: 15px;
     transform: translate(0%, -100%);
     opacity: 0;
-    overflow: scroll;
+    overflow: auto;
     @media (max-height:600px) {
         height: 80%;
     }
@@ -550,7 +550,7 @@ $col-3:#9c051e;
             color: $col-3;
         }   
     }
-    .input-place{
+    .input-place, .light{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -641,6 +641,9 @@ $col-3:#9c051e;
             
         }
     }
+    #name {
+        display: none;
+    }
     .acc{
         color: $col-2;
         margin: 10px;
@@ -653,6 +656,40 @@ $col-3:#9c051e;
         }
         .create:hover{
             text-decoration: underline;
+        }
+    }
+    .light{
+        flex-direction: row;
+    }
+    .light-img{
+        background: url('../images/flashlight.png') no-repeat;
+        background-size:contain;    
+        transform: rotate(225deg);
+        height: 40px;
+        width: 40px;
+        z-index: 2;
+        position: relative;
+        margin-left: -70px;
+        margin-right: 15px;
+    }
+    .light-yellow{
+        display: none;
+        background-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(254 255 0 / 50%) 100%);;
+        clip-path: polygon(160% 50%, 0 0, 0 100%);
+        width: 200px;
+        height: 40px;
+        position: relative;
+        margin-left: -265px;
+        margin-right: 50px;
+        opacity:0; 
+        animation: light-anim 0.3s linear alternate forwards;
+        @keyframes light-anim {
+
+            0%{
+            }
+            100%{
+                opacity: 1;
+            }
         }
     }
 }

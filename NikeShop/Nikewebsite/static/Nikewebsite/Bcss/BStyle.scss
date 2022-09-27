@@ -298,4 +298,135 @@ body{
    }
 
   }
-  
+  .bg-2{
+    background-color: #141618;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #141618;
+        .header__container
+            {
+            max-width: 1200px;
+            margin: 0px auto ;
+            display: flex;
+            padding: 0px 30px;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70px;
+            color: black;
+            .fa-home{
+                color: #fcfefe;
+                font-size: 36px;
+                margin-left: 15px;
+                 transition-duration: 0.5s;
+                @media (max-width:1200px) {
+                    margin-left: 0px;
+                }
+            }
+            .fa-home:hover{
+                color: $col-3;
+            }
+        }
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 1200px;
+        height: 100%;
+        margin-top: 70px;
+        gap: 25px;
+        padding: 20px;
+        @media (max-width:1200px) {
+            width: 100vw;
+        } 
+    }
+  }
+.border{
+    height: 2px;
+    width: 100%;
+    background-color: $col-3;
+    border-radius: 2px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: $col-1;
+    @media (max-width:830px) {
+        flex-direction: column;
+        align-items: flex-start;
+    } 
+    .info{
+        width: 60%;
+    }
+    .rewrite{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $col-1;
+        gap: 5px;
+        width: 25%;
+        @media (max-width:830px) {
+            width: 40%;
+        } 
+        @media (max-width:740px) {
+            width: 50%;
+        } 
+        @media (max-width:570px) {
+            width: 70%;
+        } 
+        @media (max-width:530px) {
+            width: 80%;
+        } 
+        @media (max-width:480px) {
+            width: 90%;
+        } 
+        @media (max-width:440px) {
+            width: 100%;
+        } 
+        p{
+            margin: 0px;
+        }
+        &-password{
+            border-radius: 8px;
+            background: none;
+            padding: 12px 16px;
+            border: 3px solid $col-1;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $col-1;
+            width: 100%;
+        }
+        &-password:hover{
+            border-color: $col-3;
+        }
+        input{
+            width: 80%;
+            height: 100%;
+            border: none;
+            border: 4px solid $col-1;
+            border-radius: 8px;
+            color: $col-1;
+            background-color: $col-2;
+            font-weight: 600;
+            padding: 0px;
+            line-height: normal;
+            outline: none;
+            padding: 12px 20px;
+        }
+    }
+}

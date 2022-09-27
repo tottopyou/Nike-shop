@@ -9,4 +9,6 @@ def index(request):
 def indexBasket(request):
     return render (request,"Nikewebsite/indexBasket.html")
 
+def account(request):
+    return render (request,"Nikewebsite/account.html")
 # Create your views here.
