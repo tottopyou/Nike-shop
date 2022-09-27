@@ -12,6 +12,7 @@ function log_menu (){
     setTimeout(() => {document.querySelector(".Log_in").style.animationPlayState = 'paused';},1000);
 }
 
+
 function close (){
     document.querySelector(".Log_in").style.animationPlayState = '';
     setTimeout(() => {document.querySelector(".Log_in").style.display = 'none';},1000);

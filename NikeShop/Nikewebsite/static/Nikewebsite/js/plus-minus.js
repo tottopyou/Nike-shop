@@ -10,6 +10,7 @@ function count_plus() {
 }
 
 
+
 function count_minus() {
 
     if(counter_two>1){

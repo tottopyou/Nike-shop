@@ -11,6 +11,7 @@ function count() {
     localStorage.setItem('counter', counter);
 }
 
+
 var basket=document.querySelector(".basket");
 
 function animationBasket1()
