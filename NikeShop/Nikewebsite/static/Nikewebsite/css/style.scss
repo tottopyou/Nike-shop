@@ -471,3 +471,188 @@ $col-3:#9c051e;
     text-decoration: none;
     z-index: 15;
 }
+.Log-in{
+    z-index: 15;
+    border: none;
+    color: $col-1;
+    background-color: $col-2;
+    font-size: 24px;
+}
+.Log-in:hover{
+    color: $col-3;
+}
+
+
+.Log_in{
+    width: 700px;
+    height: 70%;
+    background-color: $col-1;
+    z-index: 20;
+    position: fixed;
+    flex-direction: column;
+    top: (100vh/6);
+    display: none;
+    border-radius: 15px;
+    transform: translate(0%, -100%);
+    opacity: 0;
+    overflow: scroll;
+    @media (max-height:600px) {
+        height: 80%;
+    }
+    @media (max-height:600px) {
+        height: 80%;
+    }
+    @media (max-width:900px) {
+        width: 70%;
+    }
+    @media (max-width:750px) {
+        width: 80%;
+    }
+    @media (max-width:600px) {
+        width: 90%;
+    }
+
+    animation: log 2s linear alternate 0s forwards;
+    @keyframes log {
+        0%{
+
+        }
+        50%{
+            transform: translate(0%, 0%);
+            opacity: 1;
+        }
+        100%{
+
+        }
+    }
+   
+    .create_name{
+        width: auto;
+        height: auto;
+    }
+    .close{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        transition-duration: 0.5s;
+        .close-button{
+            border: none;
+            background-color: $col-1;
+            color: $col-2;
+            padding: 5px 5px;
+            margin: 10px 10px 0px 0px;
+            .material-icons{
+                font-size: 36px;
+            }
+        }
+        .close-button:hover{
+            color: $col-3;
+        }   
+    }
+    .input-place{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+        margin: auto;
+        flex-direction: column;
+        opacity: 1;
+        @media (max-height:600px) {
+            gap: 12px;
+        }
+        p{
+            color: $col-2;
+            font-size: 24px;
+            margin: 0px;
+        }
+        .google{
+            width: 50%;
+            height: 50px;
+            border: 4px solid $col-2;
+            border-radius: 8px;
+            color: $col-2;
+            background-color: $col-1;
+            font-weight: 600;
+            transition-duration: 0.2s;
+            @media (max-width:900px) {
+                width: 70%;
+            }
+            @media (max-width:750px) {
+                width: 80%;
+            }
+            @media (max-width:600px) {
+                width: 90%;
+            }
+        }
+        .google:hover{
+            transform: translate(0px,-5px);
+            
+        }
+        input{
+            width: 50%;
+            height: 50px;
+            border: none;
+            border: 4px solid $col-2;
+            border-radius: 8px;
+            color: $col-2;
+            background-color: $col-1;
+            font-weight: 600;
+            padding: 0px;
+            line-height: normal;
+            outline: none;
+            padding: 12px 20px;
+            @media (max-width:900px) {
+                width: 70%;
+            }
+            @media (max-width:750px) {
+                width: 80%;
+            }
+            @media (max-width:600px) {
+                width: 90%;
+            }
+
+        }
+        input:focus {
+            border: 4px solid $col-3;
+        }
+        .LogIn_button{
+            width: 50%;
+            height: 50px;
+            border-radius: 8px;
+            color: $col-1;
+            background-color: $col-2;
+            font-weight: 600;
+            transition-duration: 0.2s;
+            margin-top: 5px;
+            @media (max-width:900px) {
+                width: 70%;
+            }
+            @media (max-width:750px) {
+                width: 80%;
+            }
+            @media (max-width:600px) {
+                width: 90%;
+            }
+        }
+        .LogIn_button:hover{
+            transform: translate(0px,-5px);
+            
+        }
+    }
+    .acc{
+        color: $col-2;
+        margin: 10px;
+        font-size: 24px;
+        .create{
+            margin-left: 2px;
+            color: $col-3;
+            text-decoration: none;
+
+        }
+        .create:hover{
+            text-decoration: underline;
+        }
+    }
+}

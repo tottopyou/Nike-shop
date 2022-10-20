@@ -8,11 +8,12 @@
     <meta content='true' name='HandheldFriendly'/>
     <meta content='width' name='MobileOptimized'/>
     <meta content='yes' name='apple-mobile-web-app-capable'/>
-    <link href="{% static 'Nikewebsite/css/style.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'Nikewebsite/css/styleBurger.css' %}">
+    <link href="{% static 'Nikewebsite/css/style.css' %}?{% now 'U' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Nikewebsite/css/styleBurger.css' %}?{% now 'U' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +22,32 @@
     <title>Nike</title>
 </head>
 <body>
-    <div class="bg">
+    </form>
+    <div class="bg" >
+        <div class="Log_in">
+            <div class="close">
+                <button class="close-button">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <form action="/Nikewebsite/Basket" class="input-place">
+                <button class="google">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="30" height="30"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M156.27275,71.96408h-5.77275v-0.29742h-64.5v28.66667h40.50242c-5.90892,16.68758 -21.78667,28.66667 -40.50242,28.66667c-23.74675,0 -43,-19.25325 -43,-43c0,-23.74675 19.25325,-43 43,-43c10.96142,0 20.93383,4.13517 28.52692,10.88975l20.27092,-20.27092c-12.79967,-11.92892 -29.92083,-19.2855 -48.79783,-19.2855c-39.57792,0 -71.66667,32.08875 -71.66667,71.66667c0,39.57792 32.08875,71.66667 71.66667,71.66667c39.57792,0 71.66667,-32.08875 71.66667,-71.66667c0,-4.80525 -0.4945,-9.49583 -1.39392,-14.03592z" fill="#ffc107"></path><path d="M22.5965,52.64275l23.54608,17.26808c6.37117,-15.77383 21.801,-26.91083 39.85742,-26.91083c10.96142,0 20.93383,4.13517 28.52692,10.88975l20.27092,-20.27092c-12.79967,-11.92892 -29.92083,-19.2855 -48.79783,-19.2855c-27.52717,0 -51.39933,15.54092 -63.4035,38.30942z" fill="#ff3d00"></path><path d="M86,157.66667c18.5115,0 35.33167,-7.08425 48.04892,-18.60467l-22.18083,-18.7695c-7.19533,5.45025 -16.13933,8.7075 -25.86808,8.7075c-18.6405,0 -34.46808,-11.88592 -40.43075,-28.47317l-23.3705,18.00625c11.86083,23.20925 35.948,39.13358 63.80125,39.13358z" fill="#4caf50"></path><path d="M156.27275,71.96408h-5.77275v-0.29742h-64.5v28.66667h40.50242c-2.838,8.01592 -7.99442,14.92817 -14.64508,19.96275c0.00358,-0.00358 0.00717,-0.00358 0.01075,-0.00717l22.18083,18.7695c-1.5695,1.42617 23.61775,-17.22508 23.61775,-53.05842c0,-4.80525 -0.4945,-9.49583 -1.39392,-14.03592z" fill="#1976d2"></path></g></g></svg>
+                    Continue with Google
+                </button>
+                <p>Or</p>
+                <input type="text" id="email" name="Email" placeholder="Email">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button class="LogIn_button">
+                    Log in
+                </button>
+                <div class="acc">No account?  <a class="create" id="create_button"> Create one</a></div>
+            </form>
+        </div>
         <div class="main">
             <header class="header__burger"> 
                 <div class="header__container">
@@ -33,10 +59,11 @@
                             <div class="menu__list">
                                 <p><a data-goto=".section_1" href="" class="menu__link">Наші товари</a></p>
                                 <p><a data-goto=".section_2" href="" class="menu__link">Відгуки</a></p>    
-                                <p><a data-goto=".section_3" href="" class="menu__link">Контакти</a><p>  
+                                <p><a data-goto=".section_3" href="" class="menu__link">Контакти</a></p>  
                             </div>
                         </nav>
                     </div>
+                    <button class="Log-in">Log in</button>
                     <a href="{% url 'indexBasket' %}" class="teleport">
                         <div class="basket">
                             <div class="number">
@@ -262,7 +289,7 @@
                             <option value="7">43</option>
                             <option value="8">44</option>
                             <option value="9">45</option>
-                          </select>
+                            </select>
                           <button id="6" class="buy">Купити</button>
                         </div>
                         
@@ -304,19 +331,16 @@
             <div class="feadbacks section_2">
                 <div class="container">
                     <h2 class="comments">Comments</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputName1" class="form-label">Name :</label>
-                            <input type="name" class="form-control" id="exampleInputName1" >
-                          </div>
-                          <div class="mb-3">
-                            <label for="exampleInputFeadback1" class="form-label">Your feadback :</label>
-                            <input type="text" class="form-control" id="exampleInputFeadback1">
-                          </div>
-                          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-                    </form>
+                    <div class="mb-3">
+                        <label for="exampleInputName1" class="form-label">Name :</label>
+                        <input type="name" class="form-control" id="exampleInputName1" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputFeadback1" class="form-label">Your feadback :</label>
+                        <input type="text" class="form-control" id="exampleInputFeadback1">
+                    </div>  
                     <div class="mb-2" id="feadback-field">
-                        
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                     </div>
                 </div>
             </div>
@@ -363,6 +387,7 @@
     <script src="{% static 'Nikewebsite/js/scroll.js' %}"></script>
     <script src="{% static 'Nikewebsite/js/main.js' %}"></script>
     <script src="{% static 'Nikewebsite/js/counter.js' %}"></script>
+    <script src="{% static 'Nikewebsite/js/LogIn.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>

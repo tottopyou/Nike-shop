@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'Nikewebsite/Bcss/BStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'Nikewebsite/Bcss/BStyle.css' %}?{% now 'U' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body> 
+    <div class="video">
+    <video autoplay muted id="myVideo">
+        <source src="{% static 'Nikewebsite/Video/video.mp4' %}" type="video/mp4">
+      </video>
+    </div>
     <div class="bg">
         <header class="header">
             <div class="header__container">
@@ -29,6 +35,11 @@
                     <div id="fotoChoose" class="foto">
                     </div>
                     <div class="about-sneakers">
+                        <div class="close">
+                            <button class="close-button">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </div>
                         <h1>NIKE AIR VAPORMAX</h1>
                         <div class="size">
                             <h3>Розмір : 38</h3>
@@ -50,7 +61,7 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'Nikewebsite/js/scroll.js' %}"></script>
+    <script src="{% static 'Nikewebsite/js/loading.js' %}"></script>
     <script src="{% static 'Nikewebsite/js/plus-minus.js' %}"></script>
 </body>
 </html>
